@@ -1,0 +1,64 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+// Play
+
+@include keyF(changeColor8) {
+  from {
+    background-color: #2781c3;
+  }
+  to {
+    background-color: #27c39f;
+  }
+}
+
+@include keyF(lightEffect8) {
+  from {
+    box-shadow: 1px 1px 5px #27c39f;
+  }
+  to {
+    box-shadow: 0 0 2px #27c39f;
+  }
+}
+
+@include keyF(greenLight8) {
+  from {
+  }
+  to {
+    box-shadow: inset 0px 0px 32px #27c39f;
+  }
+}
+
+@include keyF(leftArrow8) {
+  from {
+    transform: translate(0px);
+    -webkit-transform: translate(18px);
+    -moz-transform: translate(0px);
+    -ms-transform: translate(0px);
+    -o-transform: translate(0px);
+  }
+  to {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
+}
+
+@include keyF(rightArrow8) {
+  from {
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+  }
+  to {
+    transform: translateX(12px);
+    -webkit-transform: translateX(12px);
+    -moz-transform: translateX(12px);
+    -ms-transform: translateX(12px);
+    -o-transform: translateX(12px);
+  }
+}

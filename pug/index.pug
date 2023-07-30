@@ -1,0 +1,80 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="./images/hangman.png", type="image/x-icon")
+    link(rel="stylesheet", href="./css/all.min.css")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="./css/normalize.css")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap", rel="stylesheet")
+    link(rel="stylesheet", href="./css/style.css")
+    title HANGMAN GAME
+  body
+    .overlay
+    form.player-info
+      .form-control
+        input#name(type='text' required='')
+        label
+          span(style='transition-delay:0ms') N
+          span(style='transition-delay:50ms') a
+          span(style='transition-delay:100ms') m
+          span(style='transition-delay:150ms') e
+      .language
+        .radio-inputs
+          label
+            input(type='radio' name='language' data-status="no" class="radio-input" id="arabic")
+            span.radio-tile
+              span.radio-icon Ar
+              span.radio-label Arabic
+          label
+            input(type='radio' name='language' data-status="no" class="radio-input" id="english")
+            span.radio-tile
+              span.radio-icon En
+              span.radio-label English
+      button#play
+        | P L A Y
+        #clip
+          #leftTop.corner
+          #rightBottom.corner
+          #rightTop.corner
+          #leftBottom.corner
+        span#rightArrow.arrow
+        span#leftArrow.arrow
+    .main-container
+      .container 
+        .theme
+          div.light 
+            i(class="fa-solid fa-sun")
+          div.night
+            i(class="fa-solid fa-moon")
+        .game-info 
+          .game-name(id="gameName") HANGMAN GAME
+          .player-name(id="playerName") Player Name:
+          .category
+            p#mainWord Word From: 
+            span.word(id="categoryWord")
+        .draw-and-letters
+          .hangman
+            .draw
+              .stand
+              .hang
+              .rope
+              .man 
+                .head 
+                .body 
+                .hands 
+                .legs
+          .all-letters
+        .answer(id="answer")
+      footer.copyright Made By 
+        a(href="https://www.linkedin.com/in/ak-zero/", target="_blank", rel="noopener noreferrer") Ak-ZeRo
+    audio(id="correct" src="./audio/Correct.mp3" preload="auto") 
+    audio(id="wrong" src="./audio/Wrong.mp3") 
+    script(src="./js/all.min.js") 
+    script(src="./js/main.js") 
+
