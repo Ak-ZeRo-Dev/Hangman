@@ -354,6 +354,7 @@ document.getElementById("english").addEventListener("change", function () {
 
 // Add letters
 function addletter(lang) {
+  allLetters.innerHTML = "";
   lang
     .toUpperCase()
     .split("")
